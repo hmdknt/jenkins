@@ -1,0 +1,18 @@
+= Jenkins
+
+== Jenkinsとは
+Jenkinsについての簡単な説明とJenkinsの歴史についての説明を行う。
+
+== CI/CDとは
+CI/CDについての説明と実際に例を出し、CI/CDの流れについての説明を行う。
+
+== Jenkinsを利用するメリット
+Jenkinsの具体的な説明を行う前にJenkinsを利用するメリットについて説明を行う。
+
+== Jenkinsを利用するにあたり必要なもの
+* GitやSVN
+* ビルドツール(Gradle)
+* テストツール(Junit)
+
+== デモ
+* 
