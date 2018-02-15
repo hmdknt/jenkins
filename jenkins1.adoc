@@ -6,15 +6,19 @@ Javaを前提に話をすることをいう必要ある
 == CI/CDとは
 継続的インテグレーションとは、
 
-工程によって利用用途が違う
+工程によって利用用途が違うことを
 
 - なんのために目的
 
 == 利用するツールって何があるか
-
 - CircleCI
 - TravisCI
 - Jenkins
+
+各ツールの特徴を比較する
+- コスト
+-
+-
 
 == Jenkinsとは
 Jenkinsについての簡単な説明とJenkinsの歴史についての説明を行う。
@@ -50,7 +54,11 @@ Jenkinsの具体的な説明を行う前にJenkinsを利用するメリットに
 * ライブラリ管理（Nexus、Artifacroty）
 
 == Gitって知ってます？
+* gitでsvnにもコミットできるらしい
+** https://qiita.com/k0kubun/items/b7768f2509592fd1548f
+** https://git-scm.com/docs/git-svn/2.14.0
 
+* 現在の利用率をネットのグラフを参考資料として紹介し、SVNは時代遅れだということを述べる。
 
 == GettingStandard
 簡単なり利用例。
