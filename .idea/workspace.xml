@@ -2,40 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1840b9e-44be-4bd5-8db2-1c5b2480997c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/CIツール.xlsx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/Git.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/GitLab.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/Jacoco.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/Jenkins.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/Jenkins1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/Junit.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/SonarQube.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/Travis_CI.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/Travis_CI1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/build.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/build_pipeline.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/checkstyle.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/circle_ci.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/circle_ci1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/compare_citools.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/developer.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/developer1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/developer2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/developer3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/execute_time.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/findbugs.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/git-flow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/github-flow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/gradle.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/nexus.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/nexus1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/settings1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/settings2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/statics.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/subversion.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/table1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/images/webhook.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/jenkins1.adoc" afterPath="$PROJECT_DIR$/jenkins1.adoc" />
       <change beforePath="$PROJECT_DIR$/reveal.js" afterPath="$PROJECT_DIR$/reveal.js" />
     </list>
@@ -52,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/jenkins1.adoc">
           <provider selected="true" editor-type-id="split-provider[text-editor;AsciiDocPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="762">
-                <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+              <first_editor relative-caret-position="546">
+                <caret line="193" column="0" lean-forward="true" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -86,10 +52,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="94" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="99" />
+    <option name="y" value="86" />
+    <option name="width" value="1288" />
+    <option name="height" value="694" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -267,7 +233,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1552" height="850" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -282,7 +248,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25479743" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32037532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -595,8 +561,8 @@
     <entry file="file://$PROJECT_DIR$/jenkins1.adoc">
       <provider selected="true" editor-type-id="split-provider[text-editor;AsciiDocPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="762">
-            <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <first_editor relative-caret-position="546">
+            <caret line="193" column="0" lean-forward="true" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
