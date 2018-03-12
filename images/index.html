@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+	<style>
+		.reveal h2 {text-transform: none;}
+		.reveal h3 {text-transform: none;}
+	</style>
+</head>
+<body>
+<div class="reveal">
+	<div class="slides">
+		<section >
+			<h3>Jenkinsの紹介</h3>
+			<aside class="notes">
+				これからJenkinsの紹介を行いたいと思いますが、現在のプロジェクトがJavaの開発を行っていることや JenkinsがJavaの開発で
+				広く利用されていることから、今回はJavaの開発を前提としてJenkinsの紹介を させていただきます。もちろんJenkinsは、
+				PythonやPHPといったJava以外でのの開発でも利用することができます。
+			</aside>
+		</section>
+
+		<section>
+			<h3>CIって何?</h3>
+
+			<aside class="notes">
+				Jenkinsについて説明する前にCIについて知っていただく必要があるため、まずはCIについての説明を行います。
+				皆さん、CIとは何かご存知でしょうか？
+			</aside>
+
+		</section>
+
+		<section>
+			<p class="fragment" align="left">・Continuous Integrationの略</p>
+			<p class="fragment" align="left">・継続的インテグレーションと呼ばれている</p>
+			<aside class="notes">
+				CIとは、Continuous Integrationの略で一般的には、継続的インテグレーションと呼ばれています
+			</aside>
+		</section>
+
+		<section>
+			<img src="./images/build.png" style="background:none; border:none; box-shadow:none;">
+			<aside class="notes">
+				具体的には、開発者がGitやSVNなどのバージョン管理システムに対してソースコードの変更をコミットする度に、スライドで示すような
+				ビルドを自動で行うことを指します。ここでいうデプロイとは、静的解析の結果をSonarQubeのようなメトリクスツールにデプロイする
+				ことやNexusやartifactといったライブラリ管理ツールにアーカイブしたjarファイルをデプロイすることを言います。
+			</aside>
+		</section>
+
+		<section>
+			<section>
+				<h3>CIのメリットって？</h3>
+			</section>
+
+			<section>
+				<p class="fragment" align="left">・ローカル環境で発見できなかったミスを発見することができる</p>
+				<p class="fragment" align="left">・手戻りの削減につながる</p>
+				<p class="fragment" align="left">・稼働時間の短縮につながる</p>
+				<p class="fragment" align="left">・品質の維持につながる</p>
+
+				<aside class="notes">
+					CIのメリットとして、変更内容をバージョン管理システムに対してコミットしたときにローカル環境で開発者が発見できていないミスを +
+					コミットの度にビルドが走るので発見することができます。 +
+					ミスが見つかるたびに修正を行うため、行程が進んだ後の手戻りの削減につながります。 +
+					人間による手作業ではなく自動でビルドを実行するので、稼働時間の短縮や品質の維持にもつながります。
+				</aside>
+			</section>
+		</section>
+
+		<section>
+			<h4>CIで利用できるツールって何があるの？</h4>
+
+			<aside class="notes">
+				先ほど説明したようなビルドを自動で実行するためのツールはいくつかありますが、ここではJenkins、CircleCI、
+				TravisCIについて簡単に説明したいと思います。
+			</aside>
+		</section>
+
+		<section>
+			<img src="./images/compare_citools.png" style="background:none; border:none; box-shadow:none;">
+			<aside class="notes">
+				この3つのCIツールをサービスの面で比較すると、Jenkinsはオンプレミスであり、残りのCircleCiとTravisCiはSaasです。
+				次に、GitHubと連携ができるかを比較した時に、3つのツールともGithubと連携することが可能です。
+				次に、WebGUIの設定ができるかを比較したときに、JenkinsとCircleCIはWebGUIによる設定することが可能ですが、
+				TravisCiに関しては、ファイルによって設定を行う必要があります。
+			</aside>
+		</section>
+
+		<section>
+			<section>
+				<h3>Jenkinsって何？</h3>
+			</section>
+		</section>
+
+		<section>
+			ビルドを自動で行うためのツール
+			<aside class="notes">
+				JenkinsとはCIで説明したようなビルドを自動で行うためのツールである。
+			</aside>
+		</section>
+
+
+
+		<section>
+			<h3>Jenkinsのメリットって？</h3>
+		</section>
+
+		<section id="fragments">
+			<h3>集合知がある</h3>
+			<p class="fragment" align="left">　　　　　　　　・プラグイン</p>
+			<p class="fragment" align="left">　　　　　　　　・参考書</p>
+			<p class="fragment" align="left">　　　　　　　　・ネットの情報</p>
+		</section>
+
+		<section id="fragments">
+			<h3>連携が簡単</h3>
+			<p class="fragment" align="left">　　　　　　　　・WebHook</p>
+			<p class="fragment" align="left">　　　　　　　　・プラグイン</p>
+		</section>
+
+		<section>
+			<h3>Git使ってますか？</h3>
+			<img src="./images/Git.png" style="background:none; border:none; box-shadow:none;">
+		</section>
+
+		<section>
+			GitとSVNの比較
+		</section>
+
+		<section>
+			<img src="./images/statics.png" style="width:40%; height:40%; background:none; border:none; box-shadow:none;">
+		</section>
+
+		<section>
+			Gitの例
+		</section>
+
+		<section>
+			<section>
+				<h3>プロジェクトにおけるJenkinsの活用例</h3>
+			</section>
+
+			<section>
+				ビルド結果を通知する
+				<p class="fragment" align="left">・MattermostやSlackなどのチャットツール</p>
+				<p class="fragment" align="left">・メール</p>
+				<p class="fragment" align="left">・Jenkinsのアプリ</p>
+			</section>
+
+			<section>
+				Jenkinsfileにビルドスクリプトを記述する
+				<p class="fragment" align="left">・GUIでの操作が減る</p>
+				<p class="fragment" align="left">・設定をファイルで管理可能</p>
+				<p class="fragment" align="left">・設定をファイルで管理可能</p>
+
+			</section>
+
+			<section>
+				プラグインを利用する
+			</section>
+
+			<section>
+
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h3>開発事例</h3>
+			</section>
+
+			<section id="fragments">
+				<p class="fragment" align="left">・バージョン管理（GitHub、GitLabやSVN）</p>
+				<p class="fragment" align="left">・ビルドツール(Gradle、Maven)</p>
+				<p class="fragment" align="left">・テストツール(Junit、Spock)</p>
+				<p class="fragment" align="left">・カバレッジツール(jacoco)</p>
+				<p class="fragment" align="left">・静的解析ツール(CheckStyle、FindBugs、PMD)</p>
+				<p class="fragment" align="left">・メトリクス(SonarQube) </p>
+				<p class="fragment" align="left">・ライブラリ管理（Nexus、Artifacroty）</p>
+			</section>
+		</section>
+
+
+		<section>
+			<h3>ビルドパイプラインの紹介</h3>
+		</section>
+
+		<section>
+			<img src="./images/build_pipeline.png" style="background:none; border:none; box-shadow:none;">
+		</section>
+
+	</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+</body>
+</html>
