@@ -22,6 +22,7 @@
 	</script>
 
 	<style>
+		.reveal h1 {text-transform: none;}
 		.reveal h2 {text-transform: none;}
 		.reveal h3 {text-transform: none;}
 	</style>
@@ -30,16 +31,23 @@
 <div class="reveal">
 	<div class="slides">
 		<section >
-			<h3>Jenkinsの紹介</h3>
+			<h1>Jenkinsの紹介</h1>
 			<aside class="notes">
-				これからJenkinsの紹介を行いたいと思いますが、現在のプロジェクトがJavaの開発を行っていることや JenkinsがJavaの開発で
+				これからJenkinsの紹介を行いたいと思います。
+			</aside>
+		</section>
+
+		<section>
+			<h2>Java開発</h2>
+			<aside class="notes">
+				現在のプロジェクトがJavaの開発を行っていることや JenkinsがJavaの開発で
 				広く利用されていることから、今回はJavaの開発を前提としてJenkinsの紹介を させていただきます。もちろんJenkinsは、
 				PythonやPHPといったJava以外でのの開発でも利用することができます。
 			</aside>
 		</section>
 
 		<section>
-			<h3>CIって何?</h3>
+			<h2>CIって何?</h2>
 
 			<aside class="notes">
 				Jenkinsについて説明する前にCIについて知っていただく必要があるため、まずはCIについての説明を行います。
@@ -49,6 +57,7 @@
 		</section>
 
 		<section>
+			<h2>CIとは</h2>
 			<p class="fragment" align="left">・Continuous Integrationの略</p>
 			<p class="fragment" align="left">・継続的インテグレーションと呼ばれている</p>
 			<aside class="notes">
@@ -57,36 +66,37 @@
 		</section>
 
 		<section>
-			<img src="./images/build.png" style="background:none; border:none; box-shadow:none;">
+			<img src="./images/build_cycle.png" style="background:none; border:none; box-shadow:none;">
 			<aside class="notes">
 				具体的には、開発者がGitやSVNなどのバージョン管理システムに対してソースコードの変更をコミットする度に、スライドで示すような
-				ビルドを自動で行うことを指します。ここでいうデプロイとは、静的解析の結果をSonarQubeのようなメトリクスツールにデプロイする
-				ことやNexusやartifactといったライブラリ管理ツールにアーカイブしたjarファイルをデプロイすることを言います。
+				ビルドを自動で行うことを指します。ここでいうデプロイとは、静的解析の結果をSonarQubeのようなメトリクスツールに送信する
+				ことやNexusやartifactoryといったライブラリ管理ツールにアーティファクトを登録することを言います
 			</aside>
 		</section>
 
 		<section>
-			<section>
-				<h3>CIのメリットって？</h3>
-			</section>
-
-			<section>
-				<p class="fragment" align="left">・ローカル環境で発見できなかったミスを発見することができる</p>
-				<p class="fragment" align="left">・手戻りの削減につながる</p>
-				<p class="fragment" align="left">・稼働時間の短縮につながる</p>
-				<p class="fragment" align="left">・品質の維持につながる</p>
-
-				<aside class="notes">
-					CIのメリットとして、変更内容をバージョン管理システムに対してコミットしたときにローカル環境で開発者が発見できていないミスを +
-					コミットの度にビルドが走るので発見することができます。 +
-					ミスが見つかるたびに修正を行うため、行程が進んだ後の手戻りの削減につながります。 +
-					人間による手作業ではなく自動でビルドを実行するので、稼働時間の短縮や品質の維持にもつながります。
-				</aside>
-			</section>
+			<h2>CIのメリットって？</h2>
 		</section>
 
 		<section>
-			<h4>CIで利用できるツールって何があるの？</h4>
+			<h2>CIのメリット</h2>
+			<p class="fragment" align="left">・開発者がローカル環境で見逃したコーディング規約違反やテストケース漏れを防ぐことができる</p>
+			<p class="fragment" align="left">・稼働時間の短縮につながる</p>
+			<p class="fragment" align="left">・手戻りの削減につながる</p>
+			<p class="fragment" align="left">・品質の維持につながる</p>
+
+			<aside class="notes">
+				CIのメリットとしては次のようなものが挙げられます。
+				* 機械的にビルドを実行するため、ビルドの工程をすべて網羅することが可能となり、開発者がローカル環境で見逃したコーディング +
+				規約違反やテストケース漏れを防ぐことができます
+				* 自動でビルドが実行されるため、稼働時間の短縮につながります
+				* バージョン管理システムに変更が適応される度にビルドを行い、ビルドが失敗したらビルドが成功するまで修正を繰り返すという +
+				サイクルを継続的に回すため、バグの混入が少なくなり、工程が進んだ後の手戻りのリスクの削減や品質の維持につながります
+			</aside>
+		</section>
+
+		<section>
+			<h2>利用できるツールは？</h2>
 
 			<aside class="notes">
 				先ほど説明したようなビルドを自動で実行するためのツールはいくつかありますが、ここではJenkins、CircleCI、
@@ -95,18 +105,27 @@
 		</section>
 
 		<section>
+			<h3>利用できるツール</h3>
 			<img src="./images/compare_citools.png" style="background:none; border:none; box-shadow:none;">
 			<aside class="notes">
-				この3つのCIツールをサービスの面で比較すると、Jenkinsはオンプレミスであり、残りのCircleCiとTravisCiはSaasです。
-				次に、GitHubと連携ができるかを比較した時に、3つのツールともGithubと連携することが可能です。
-				次に、WebGUIの設定ができるかを比較したときに、JenkinsとCircleCIはWebGUIによる設定することが可能ですが、
-				TravisCiに関しては、ファイルによって設定を行う必要があります。
+				この3つのCIツールを構築の面で見たときに、Jenkinsはオンプレミスなため利用するには、自らで構築を行う必要がありますが自ら構築 +
+				する分自由度は高いです。CircleCiとTravisCiに関してはSaasであり、自らで構築する必要がないためサービスに登録すればすぐに +
+				利用することができますが、自由度は低くなります。
+				GitHubと連携ができるかを見た時に、3つのツールともGithubと連携することが可能です。 +
+				WebUIで設定ができるかを見たたときに、JenkinsとCircleCIはWebUIで簡単に設定することが可能ですが、TravisCiに関しては、 +
+				yaml定義ファイルによって設定を行う必要があるため、設定したい内容をyamlで書けるということが利用の条件になります。
+
+				情報を公開することに問題がないOSSや個人的な開発を行う上では、GitHubでバージョン管理し、circleciやTravis CIを利用し +
+				ビルドを行うことに問題はありません。しかし、情報を内部に閉じたい開発では、GitHubやcircleci、Travis CIといったSaaSは +
+				情報漏洩のリスクやセキュリティを自ら設定できないという点で利用しづらいです。そのため、情報を内部で閉じたい開発の場合は、 +
+				バージョン管理システムにはオンプレミスで構築可能なGitLabやGitBucketを利用しCIツールにはJenkinsを利用するといった形を +
+				取ることがあります。
 			</aside>
 		</section>
 
 		<section>
 			<section>
-				<h3>Jenkinsって何？</h3>
+				<h2>Jenkinsって何？</h2>
 			</section>
 		</section>
 
@@ -118,9 +137,8 @@
 		</section>
 
 
-
 		<section>
-			<h3>Jenkinsのメリットって？</h3>
+			<h2>Jenkinsのメリットって？</h2>
 		</section>
 
 		<section id="fragments">
@@ -128,30 +146,136 @@
 			<p class="fragment" align="left">　　　　　　　　・プラグイン</p>
 			<p class="fragment" align="left">　　　　　　　　・参考書</p>
 			<p class="fragment" align="left">　　　　　　　　・ネットの情報</p>
+
+			<aside class="notes">
+			Jenkinsには多くのプラグインが存在し、用途によって使用するプラグインを選択し自由にカスタマイズできるため汎用性が高いです。 +
+			また、書籍も出版されておりネットにも多くの情報が転がっているため、設定方法やエラー事象の解決方法を発見できる可能性が高いです。
+			</aside>
+		</section>
+
+		<section>
+			<section>
+				<h3>GUIで設定可能</h3>
+				<img src="./images/settings1.png" style="background:none; border:none; box-shadow:none;">
+
+				<aside class="notes">
+					Jenkinsのタスクを実行するための設定(ジョブ)はGUIベースで行うことができ、誰でも簡単に設定することができます。 +
+					項目についての説明は省かせていただきますが、基本的には、設定したいものにチェックを入れ、チェックを入れると出てくる項目に +
+					設定内容を追加することで処理が適応されます
+				</aside>
+
+			</section>
+
+			<section>
+				<img src="./images/settings2.png" style="background:none; border:none; box-shadow:none;">
+			</section>
+
 		</section>
 
 		<section id="fragments">
-			<h3>連携が簡単</h3>
-			<p class="fragment" align="left">　　　　　　　　・WebHook</p>
-			<p class="fragment" align="left">　　　　　　　　・プラグイン</p>
+			<h3>定期実行可能</h3>
+			<img src="./images/execute_time.png" style="background:none; border:none; box-shadow:none;">
+
+			<aside class="notes">
+				JenkinsはCronによってビルドの実行時間を設定することができます。これにより、毎日定期的に行うビルドに関しては、人の手で +
+				行う必要がなくなるため、ビルド忘れの防止や稼働時間の削減につながります。
+			</aside>
+
+		</section>
+
+		<section id="fragments">
+			<section>
+				<h3>WebHookの設定が可能</h3>
+
+			</section>
+
+			<section>
+				<img src="./images/webhook.png" style="background:none; border:none; box-shadow:none;">
+
+				<aside class="notes">
+					WebHookとは、簡単に説明するとAというアプリとBというアプリがあったときに、Aのアプリでイベントが発生したときに、Bのアプリに +
+					イベントが発生したことをリアルタイムで通知するようなことを言います。Jenkinsは、このWebHookの仕組みを利用することで、バージョン管理システムに対して変更が適応される度に、自動でビルドを実行
+					することが可能になります。
+				</aside>
+
+			</section>
 		</section>
 
 		<section>
 			<h3>Git使ってますか？</h3>
 			<img src="./images/Git.png" style="background:none; border:none; box-shadow:none;">
+			<aside class="notes">
+				急ではありますがここでGitについて説明したいと思います。 +
+				皆さん、そもそもGit利用していますか？ +
+				まだ、バージョン管理システムにSVNを利用していませんか？バージョン管理システムと言えば今はGitです。 +
+			</aside>
+
 		</section>
 
 		<section>
-			GitとSVNの比較
-		</section>
-
-		<section>
+			<h3>バージョン管理システムの利用率</h3>
 			<img src="./images/statics.png" style="width:40%; height:40%; background:none; border:none; box-shadow:none;">
+			<aside class="notes">
+				ZeroTurnaround社が2016年に公表した資料の中のバージョン管理システムの利用率を示したグラフをご覧ください。 +
+				2016年時点のGitの利用率は68%と全体の3分の2を占めており、バージョン管理システムにSVNではなくGitが広く +
+				使われていることが分かると思います。　+
+			</aside>
 		</section>
 
 		<section>
-			Gitの例
+			<h2>なぜGitなの？</h2>
+			<aside class="notes">
+				ZeroTurnaround社が2016年に公表した資料の中のバージョン管理システムの利用率を示したグラフをご覧ください。 +
+				2016年時点のGitの利用率は68%と全体の3分の2を占めており、バージョン管理システムにSVNではなくGitが広く +
+				使われていることが分かると思います。　+
+			</aside>
 		</section>
+
+		<section>
+			<h3>SVN</h3>
+		</section>
+
+		<section>
+			<h3>SVNのどこかダメなの？</h3>
+		</section>
+
+		<section>
+			<h3>SVNの悪い点</h3>
+			<p class="fragment" align="left">・バグの有無に関わらず、変更内容をコミットした時点で変更内容が取り込まれてしまう</p>
+			<p class="fragment" align="left">・レビューをするのに管理簿が必要</p>
+
+
+			<aside class="notes">
+				バグの有無に関わらず、変更内容をコミットした時点で変更内容が取り込まれてしまう点についてですが、バグを含んだ変更内容をtrunkにコミット +
+				した場合、他の開発者がバグを含んだ状態のtrunkに更新して開発を進めていく可能性があります。そのため、混入したバグが原因でビルドがうまくいかないなど +
+				開発者の開発が止まるといったことが考えられます。バグが混入したコミットの度にこのような状態に陥る可能性があり、人数が多いと影響範囲を制限することが +
+				難しいため、SVNは人数の多い開発には向かないと思われます。
+			</aside>
+
+			<aside class="notes">
+				次に、レビューをするのに管理簿が必要についてですが、SVNではレビューを管理するには管理簿を用意する必要があります。そのため、レビューをしてもらう場合、 +
+				管理簿に変更内容と変更箇所を書き、レビュアーはその管理簿を見てレビューを行います。一見問題なさそうに見えますが、レビュアーは管理簿とソースコードの2つを +
+				行き来する必要があるため、レビューのスピードと精度が下がってしまします。また、レビュー中に誰かがレビュー対象のソースコードを更新すると、管理簿とソースコード間の +
+				情報が異なってしまうため、修正箇所を再度確認し、管理簿を修正する必要があるなど、コミット1つで無駄なやり取りが発生する可能性があるのもSVNの悪い点だと思います。
+			</aside>
+
+		</section>
+
+
+
+		<section>
+			<h2>ブランチ戦略</h2>
+
+
+		</section>
+
+
+		<section>
+			<h2>Jenkins2.0</h2>
+		</section>
+
+
+
 
 		<section>
 			<section>
@@ -183,21 +307,19 @@
 		</section>
 
 		<section>
-			<section>
-				<h3>開発事例</h3>
-			</section>
-
-			<section id="fragments">
-				<p class="fragment" align="left">・バージョン管理（GitHub、GitLabやSVN）</p>
-				<p class="fragment" align="left">・ビルドツール(Gradle、Maven)</p>
-				<p class="fragment" align="left">・テストツール(Junit、Spock)</p>
-				<p class="fragment" align="left">・カバレッジツール(jacoco)</p>
-				<p class="fragment" align="left">・静的解析ツール(CheckStyle、FindBugs、PMD)</p>
-				<p class="fragment" align="left">・メトリクス(SonarQube) </p>
-				<p class="fragment" align="left">・ライブラリ管理（Nexus、Artifacroty）</p>
-			</section>
+			<h3>プロジェクト構成</h3>
 		</section>
 
+		<section id="fragments">
+			<p class="fragment" align="left">・コミュニケーションツール(mattermost,slack)</p>
+			<p class="fragment" align="left">・バージョン管理ツール(GitLabやGitHub,SVN）</p>
+			<p class="fragment" align="left">・ビルドツール(Gradle、Maven)</p>
+			<p class="fragment" align="left">・テストツール(Junit、Spock)</p>
+			<p class="fragment" align="left">・カバレッジツール(jacoco)</p>
+			<p class="fragment" align="left">・静的解析ツール(CheckStyle、FindBugs、PMD)</p>
+			<p class="fragment" align="left">・メトリクス(SonarQube) </p>
+			<p class="fragment" align="left">・ライブラリ管理（Nexus、Artifacroty）</p>
+		</section>
 
 		<section>
 			<h3>ビルドパイプラインの紹介</h3>
