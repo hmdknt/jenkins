@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1840b9e-44be-4bd5-8db2-1c5b2480997c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/build_cycle.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webhook.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/images/images/webhook.png" afterPath="$PROJECT_DIR$/images/images/webhook.png" />
-      <change beforePath="$PROJECT_DIR$/images/index.html" afterPath="$PROJECT_DIR$/images/index.html" />
-      <change beforePath="$PROJECT_DIR$/images/webhook.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jenkins1.adoc" afterPath="$PROJECT_DIR$/jenkins1.adoc" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/images/index.html" />
+      <change beforePath="$PROJECT_DIR$/images/statics.png" afterPath="$PROJECT_DIR$/images/statics.png" />
       <change beforePath="$PROJECT_DIR$/reveal.js" afterPath="$PROJECT_DIR$/reveal.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,15 +29,26 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/images/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reveal.js/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2242">
-              <caret line="214" column="17" lean-forward="true" selection-start-line="214" selection-start-column="17" selection-end-line="214" selection-end-column="17" />
+            <state relative-caret-position="-21">
+              <caret line="323" column="46" lean-forward="false" selection-start-line="323" selection-start-column="46" selection-end-line="323" selection-end-column="46" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#section#0;n#section#13;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#section#1;n#section#13;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#section#14;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#section#1;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#section#17;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,22 +109,6 @@
               <item name="jenkins" type="b2602c69:ProjectViewProjectNode" />
               <item name="jenkins" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="jenkins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jenkins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
-              <item name="reveal.js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jenkins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jenkins" type="462c0819:PsiDirectoryNode" />
-              <item name="reveal.js" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -136,10 +126,10 @@
       <recent name="C:\Users\pc1\Desktop\jenkins\reveal.js\images" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pc1\Desktop\jenkins\images\images" />
       <recent name="C:\Users\pc1\Desktop\jenkins\reveal.js\images" />
       <recent name="C:\Users\pc1\Desktop\jenkins" />
       <recent name="C:\Users\pc1\Desktop\jenkins\images" />
-      <recent name="C:\Users\pc1\Desktop\jenkins\images\images" />
       <recent name="C:\Users\pc1\Desktop\jenkins\reveal.js" />
     </key>
   </component>
@@ -620,14 +610,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reveal.js/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2242">
-          <caret line="214" column="17" lean-forward="true" selection-start-line="214" selection-start-column="17" selection-end-line="214" selection-end-column="17" />
+        <state relative-caret-position="-21">
+          <caret line="323" column="46" lean-forward="false" selection-start-line="323" selection-start-column="46" selection-end-line="323" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#img#0;n#section#0;n#section#13;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#section#1;n#section#13;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#section#14;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#section#1;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#section#17;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/images/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
